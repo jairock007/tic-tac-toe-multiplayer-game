@@ -1,9 +1,27 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+const cors = require("cors")
+const express = require("express")
+
+const app = express()
+
+app.use(cors(
+  {
+  origin:[""],
+  methods:["POST","GET"],
+  credentials:true
+  }
+));
+app.use(express.json())
+
+
+app.get("/", (req, res) => {
+  res.json("Hello")
+})
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: "https://tic-tac-toe-multiplayer-game-front.vercel.app",
+  cors: "http://localhost:5174/",
 });
 
 const allUsers = {};
