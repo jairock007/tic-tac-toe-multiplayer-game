@@ -19,10 +19,10 @@ app.get("/", (req, res) => {
   res.json("Hello");
 })
 
-// const httpServer = createServer();
-// const io = new Server(httpServer, {
-//   cors: "http://localhost:5174/",
-// });
+const httpServer = createServer();
+const io = new Server(httpServer, {
+  cors: "http://localhost:5174/",
+});
 
 const allUsers = {};
 const allRooms = [];
