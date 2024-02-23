@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: "https://tic-tac-toe-multiplayer-game-indol.vercel.app/",
+  cors: "",
 });
 
 const allUsers = {};
