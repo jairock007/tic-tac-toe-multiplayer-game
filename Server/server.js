@@ -16,7 +16,7 @@ app.use(express.json())
 
 
 app.get("/", (req, res) => {
-  res.json("Hello")
+  res.json("Hello");
 })
 
 // const httpServer = createServer();
